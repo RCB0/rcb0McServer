@@ -1,13 +1,15 @@
 {
-  "name": "src-server-deploy-",
+  "name": "mc-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "logEvents.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "rcb-Reyn",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mineflayer": "^4.20.1"
+  }
 }
