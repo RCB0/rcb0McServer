@@ -1,9 +1,9 @@
 const mineflayer = require('mineflayer');
 
 const bot = mineflayer.createBot({
-  host: 'rcb0', // Minecraft server IP
+  host: 'localhost', // Replace with your Minecraft server IP or hostname
   port: 25565,       // Minecraft server port
-  username: 'player'    // Minecraft account username
+  username: 'bot'    // Minecraft account username
 });
 
 bot.on('chat', (username, message) => {
