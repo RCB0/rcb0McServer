@@ -1,19 +1,17 @@
-const mineflayer = require('mineflayer');
+const net = require('net');
 
-const bot = mineflayer.createBot({
-  host: 'localhost', // Change if the Minecraft server is on a different host
-  port: 25565,       // Ensure this matches your Minecraft server port
-  username: 'bot'    // Update with your bot's username
+const serverAddress = '127.0.0.1'; // Update with your server address
+const serverPort = 19132; // Default MCPE port
+
+const client = new net.Socket();
+client.connect(serverPort, serverAddress, () => {
+    console.log('Connected to Minecraft server');
 });
 
-bot.on('login', () => {
-  console.log('Bot has logged in');
+client.on('error', (err) => {
+    console.error('Connection error:', err);
 });
 
-bot.on('error', (err) => {
-  console.error('Bot encountered an error:', err);
-});
-
-bot.on('end', () => {
-  console.log('Bot has ended');
+client.on('close', () => {
+    console.log('Connection closed');
 });
