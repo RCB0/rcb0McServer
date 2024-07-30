@@ -2,7 +2,7 @@ const net = require('net');
 
 const serverAddress = '127.0.0.1'; // Update with your server address
 const serverPort = 19132; // Default MCPE port
-const port = process.env.PORT ||19132;
+const port = process.env.PORT || 19132;
 
 const client = new net.Socket();
 client.connect(serverPort, serverAddress, () => {
