@@ -2,7 +2,7 @@ const net = require('net');
 
 // Your public IP address of the Minecraft server
 const serverAddress = '136.158.3.108'; // Update with your public IP address
-const serverPort = 19132; // Default MCPE port
+const serverPort = 49394; // Default MCPE port
 
 const client = new net.Socket();
 
